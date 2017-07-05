@@ -2,17 +2,43 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>MyQueen</title>
+    <title>face</title>
     <link rel="stylesheet" href="assets/css/main.css">
  <!--letra-->
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
   </head>
 
   <body>
-  <header>
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '321719024935151',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();   
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+<fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
+
   
-      </ul>
-    </section>
+    
 <!--link jquery y js-->
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/main.js"></script>
